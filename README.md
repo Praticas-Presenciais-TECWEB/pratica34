@@ -1,20 +1,32 @@
-# Aplicação Web de Cadastro de Jogos
+# Aplicação Web de Cadastro de Jogos — React
 
-Projeto desenvolvido para a disciplina de Tecnologias Web.
+Projeto desenvolvido para a disciplina de Tecnologias Web, consistindo em uma aplicação web em React para cadastro e gerenciamento de uma coleção pessoal de jogos, integrada a uma API REST via JSON Server.
 
-## 👤 Integrante
+## 👥 Integrantes
 
-Lucca Serafim
+| Nome | Responsabilidade |
+|------|-----------------|
+| Lucca | Página inicial (Inicio.jsx), estilização global (index.css) e configuração base do projeto |
+| Davi | Página de listagem (Listagem.jsx) e client da API (client.js) |
+| Iury | Página de formulário (Formulario.jsx) |
 
-## 📋 Responsabilidades
+## 📋 Funcionalidades
 
-- Página inicial (`Inicio.jsx`)
-- Estilização global da aplicação (`index.css`)
-- Configuração base do projeto (`App.jsx`, `main.jsx`, `db.json`)
+- Cadastro de jogos com título, gênero, plataforma, ano, nota, desenvolvedora e descrição
+- Validação de formulário com mensagens de erro
+- Listagem dinâmica dos jogos cadastrados
+- Remoção de jogos da coleção
+- Estatísticas da coleção na página inicial
+- Integração com API REST via JSON Server
+- Navegação entre páginas com React Router
 
-## 📁 Arquivos da branch
+## 📁 Estrutura do Projeto
 ```
+projetogos-react/
+
 ├── db.json
+
+├── package.json
 
 └── src/
 
@@ -24,33 +36,38 @@ Lucca Serafim
 
 ├── index.css
 
-└── pages/
-
-└── Inicio.jsx
-```
-## 📄 Descrição
-
-A página inicial exibe as estatísticas da coleção de jogos buscando os dados da API REST, mostrando total de games cadastrados, gêneros diferentes, nota média e último game adicionado. O `index.css` é compartilhado entre todas as páginas da aplicação, definindo o layout, cores e responsividade do projeto.
-Davi
-
-## 📋 Responsabilidades
-
-- Página de listagem (`Listagem.jsx`)
-- Client da API (`api/client.js`)
-
-## 📁 Arquivos da branch
-```
-src/
-
 ├── api/
 
 │   └── client.js
 
 └── pages/
 
-└── Listagem.jsx
+├── Inicio.jsx
 
+├── Listagem.jsx
+
+└── Formulario.jsx
 ```
-## 📄 Descrição
+## 🚀 Como executar
 
-A página de listagem exibe todos os jogos cadastrados buscando os dados direto da API REST via JSON Server. O `client.js` contém as funções CRUD para comunicação com a API.
+1. Clone o repositório
+2. Instale as dependências:
+```bash
+npm install
+```
+3. Em dois terminais separados, rode:
+```bash
+npm run dev
+```
+```bash
+npm run json-server
+```
+4. Acesse `http://localhost:5173` no navegador
+
+## 🛠️ Tecnologias utilizadas
+
+- React com Vite
+- React Router
+- JSON Server
+- CSS3 com variáveis e Flexbox
+- JavaScript puro (Vanilla JS)
